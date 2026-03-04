@@ -1,0 +1,224 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero-img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.45);
+}
+
+.overlay{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding-top:150px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:300;
+    letter-spacing:2px;
+}
+
+.sub{
+    margin-top:15px;
+    font-size:18px;
+    color:#ccc;
+}
+
+.info-box{
+    margin-top:25px;
+    font-size:15px;
+    line-height:1.6;
+}
+
+.precio{
+    color:gold;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.btn-principal{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 40px;
+    background:gold;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.btn-principal:hover{
+    background:#e6c200;
+}
+
+/* ================= GALERIA ================= */
+
+.galeria{
+    padding:80px 40px;
+    background:#000;
+    text-align:center;
+}
+
+.galeria h2{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:23%;
+    background:#111;
+    padding:15px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:4px;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+/* ================= BENEFICIOS ================= */
+
+.beneficios{
+    padding:60px 20px;
+    text-align:center;
+    background:#0f0f0f;
+}
+
+.beneficios h2{
+    margin-bottom:20px;
+}
+
+.beneficios p{
+    margin:8px 0;
+}
+
+/* ================= CHAT ================= */
+
+.chat-container{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:320px;
+    background:#1a1a1a;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    overflow:hidden;
+    z-index:999;
+}
+
+.chat-header{
+    background:gold;
+    color:black;
+    padding:10px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.chat-body{
+    height:200px;
+    overflow-y:auto;
+    padding:10px;
+    font-size:14px;
+}
+
+.chat-input{
+    display:flex;
+}
+
+.chat-input input{
+    width:70%;
+    padding:8px;
+    border:none;
+    outline:none;
+}
+
+.chat-input button{
+    width:30%;
+    border:none;
+    background:gold;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.bot{
+    color:gold;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    /* CHAT AJUSTADO PARA CELULAR */
+    .chat-container{
+        width:280px;
+        right:10px;
+        bottom:10px;
+        border-radius:12px;
+    }
+
+    .chat-body{
+        height:150px;
+    }
+
+    .chat-input input{
+        font-size:14px;
+    }
+}
